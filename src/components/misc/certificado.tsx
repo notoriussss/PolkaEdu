@@ -18,7 +18,7 @@ interface CertificadoProps {
 
     // Props de la versión HEAD para compatibilidad
     category?: string;
-    level?: 'Principiante' | 'Intermedio' | 'Avanzado';
+    level?: 'Beginner' | 'Intermediate' | 'Advanced';
     enrolled?: number;
     description?: string;
     reviews?: number;
@@ -35,9 +35,9 @@ const levelColors = {
   red: { bg: "bg-red-100", text: "text-red-600" },
 };
 const levelNameToColor: Record<string, "green" | "yellow" | "red"> = {
-  'Principiante': 'green',
-  'Intermedio': 'yellow',
-  'Avanzado': 'red'
+  'Beginner': 'green',
+  'Intermediate': 'yellow',
+  'Advanced': 'red'
 };
 
 export default function Certificado({ 

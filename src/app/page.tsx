@@ -55,7 +55,7 @@ export default function Home() {
       users: 1250,
       rating: 4.8,
       categoryTag: { name: "Fundamentos" },
-      levelTag: { name: "Principiante", color: "green" as const },
+      levelTag: { name: "Beginner", color: "green" as const },
     },
     {
       title: "Desarrollo en substrate",
@@ -64,7 +64,7 @@ export default function Home() {
       users: 890,
       rating: 4.9,
       categoryTag: { name: "Blockchain" },
-      levelTag: { name: "Intermedio", color: "yellow" as const },
+      levelTag: { name: "Intermediate", color: "yellow" as const },
     },
     {
       title: "Smart Contracts con Ink!",
@@ -73,7 +73,7 @@ export default function Home() {
       users: 645,
       rating: 4.8,
       categoryTag: { name: "Programación" },
-      levelTag: { name: "Avanzado", color: "red" as const },
+      levelTag: { name: "Advanced", color: "red" as const },
     },
     {
       title: "Introducción a la Gobernanza Descentralizada (DAO)",
@@ -82,7 +82,7 @@ export default function Home() {
       users: 1150,
       rating: 4.5,
       categoryTag: { name: "Gobernanza" },
-      levelTag: { name: "Principiante", color: "green" as const },
+      levelTag: { name: "Beginner", color: "green" as const },
     },
     {
       title: "Integración dApps con Polkadot.js API y React",
@@ -91,7 +91,7 @@ export default function Home() {
       users: 885,
       rating: 4.9,
       categoryTag: { name: "Programación" },
-      levelTag: { name: "Intermedio", color: "yellow" as const },
+      levelTag: { name: "Intermediate", color: "yellow" as const },
     },
     {
       title: "Creando NFTs Coleccionables en la red",
@@ -100,7 +100,7 @@ export default function Home() {
       users: 741,
       rating: 4.7,
       categoryTag: { name: "DeFi & NFTs" },
-      levelTag: { name: "Intermedio", color: "yellow" as const },
+      levelTag: { name: "Intermediate", color: "yellow" as const },
     },
   ];
 

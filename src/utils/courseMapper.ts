@@ -7,13 +7,13 @@ import { Course } from '@/src/types/course';
 /**
  * Determina el nivel del curso basado en su duración
  */
-const getLevelFromDuration = (duration: number): 'Principiante' | 'Intermedio' | 'Avanzado' => {
+const getLevelFromDuration = (duration: number): 'Beginner' | 'Intermediate' | 'Advanced' => {
   if (duration >= 30) {
-    return 'Avanzado';
+    return 'Advanced';
   } else if (duration >= 15) {
-    return 'Intermedio';
+    return 'Intermediate';
   }
-  return 'Principiante';
+  return 'Beginner';
 };
 
 /**
@@ -66,7 +66,7 @@ export const mapCourseToHomeCard = (course: Course, imageIndex?: number) => {
     categoryTag: { name: category },
     levelTag: { 
       name: level, 
-      color: level === 'Avanzado' ? 'red' as const : level === 'Intermedio' ? 'yellow' as const : 'green' as const 
+      color: level === 'Advanced' ? 'red' as const : level === 'Intermediate' ? 'yellow' as const : 'green' as const 
     },
     description: course.description, // Agregar descripción
   };

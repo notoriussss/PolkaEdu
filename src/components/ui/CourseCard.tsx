@@ -15,7 +15,7 @@ interface CourseCardProps {
   width?: string;
   // Props de la versión HEAD para compatibilidad
   category?: string;
-  level?: 'Principiante' | 'Intermedio' | 'Avanzado';
+  level?: 'Beginner' | 'Intermediate' | 'Advanced';
   enrolled?: number;
   description?: string;
   reviews?: number;
@@ -33,9 +33,9 @@ const levelColors = {
 };
 
 const levelNameToColor: Record<string, "green" | "yellow" | "red"> = {
-  'Principiante': 'green',
-  'Intermedio': 'yellow',
-  'Avanzado': 'red'
+  'Beginner': 'green',
+  'Intermediate': 'yellow',
+  'Advanced': 'red'
 };
 
 export default function CourseCard({
