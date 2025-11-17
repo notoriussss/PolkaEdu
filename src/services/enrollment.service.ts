@@ -16,6 +16,18 @@ export interface Certificate {
   issuedAt: string;
 }
 
+export interface Lesson {
+  id: string;
+  courseId: string;
+  title: string;
+  description?: string;
+  content: string;
+  order: number;
+  duration: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface Course {
   id: string;
   title: string;
@@ -26,6 +38,7 @@ export interface Course {
   imageUrl?: string;
   createdAt: string;
   updatedAt: string;
+  lessons?: Lesson[];
 }
 
 export interface Enrollment {
