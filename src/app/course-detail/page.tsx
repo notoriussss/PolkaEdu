@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import CourseInfo from "@/src/components/ui/CourseInfo";
 import UnitsCarousel from "@/src/components/ui/UnitsCarousel";
@@ -33,7 +33,7 @@ interface Unit {
   lessonId?: string; // ID de la lección para actualizar progreso
 }
 
-export default function CourseDetail(){
+function CourseDetailContent(){
     const router = useRouter();
     const searchParams = useSearchParams();
     const courseId = searchParams.get('courseId');
@@ -372,5 +372,17 @@ export default function CourseDetail(){
                 courseName={course.title}
             />
         </div>
+    );
+}
+
+export default function CourseDetail() {
+    return (
+        <Suspense fallback={
+            <div className="bg-[#1A1A1A] min-h-screen flex items-center justify-center">
+                <div className="text-white text-xl">Loading course...</div>
+            </div>
+        }>
+            <CourseDetailContent />
+        </Suspense>
     );
 }
