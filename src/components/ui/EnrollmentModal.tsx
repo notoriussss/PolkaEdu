@@ -71,7 +71,7 @@ export default function EnrollmentModal({
               {stepMessages[step]}
             </h3>
             
-            {courseTitle && step !== 'idle' && (
+            {courseTitle && (
               <p className="text-neutral-400 text-sm mb-2">
                 {courseTitle}
               </p>
