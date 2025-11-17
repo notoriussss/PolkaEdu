@@ -58,7 +58,7 @@ export async function initPolkadot(): Promise<ApiPromise> {
   }
 
   // Inicializar keyring
-  const accountType = process.env.POLKADOT_ACCOUNT_TYPE || 'sr25519';
+  const accountType = (process.env.POLKADOT_ACCOUNT_TYPE || 'sr25519') as any;
   keyring = new Keyring({
     type: accountType,
     ss58Format: 42, // SS58 para testnets (Paseo/Westend)

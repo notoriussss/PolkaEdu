@@ -3,55 +3,20 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
+// Importar rutas y servicios directamente desde src
+// Netlify compilará TypeScript automáticamente
+import { initPolkadot } from '../../src/config/polkadot';
+import courseRoutes from '../../src/routes/course.routes';
+import enrollmentRoutes from '../../src/routes/enrollment.routes';
+import userRoutes from '../../src/routes/user.routes';
+import balanceRoutes from '../../src/routes/balance.routes';
+import nftRoutes from '../../src/routes/nft.routes';
+import paymentRoutes from '../../src/routes/payment.routes';
+import { CourseService } from '../../src/services/course.service';
+import { loadCoursesFromJson } from '../../src/utils/loadCoursesFromJson';
+
 // Cargar variables de entorno
 dotenv.config();
-
-// Importar desde archivos compilados (dist) o desde src si estamos en desarrollo
-let initPolkadot: any;
-let courseRoutes: any;
-let enrollmentRoutes: any;
-let userRoutes: any;
-let balanceRoutes: any;
-let nftRoutes: any;
-let paymentRoutes: any;
-let CourseService: any;
-let loadCoursesFromJson: any;
-
-try {
-  // Intentar importar desde dist (producción)
-  const polkadotConfig = require('../../dist/config/polkadot');
-  initPolkadot = polkadotConfig.initPolkadot;
-  
-  courseRoutes = require('../../dist/routes/course.routes').default;
-  enrollmentRoutes = require('../../dist/routes/enrollment.routes').default;
-  userRoutes = require('../../dist/routes/user.routes').default;
-  balanceRoutes = require('../../dist/routes/balance.routes').default;
-  nftRoutes = require('../../dist/routes/nft.routes').default;
-  paymentRoutes = require('../../dist/routes/payment.routes').default;
-  
-  const courseServiceModule = require('../../dist/services/course.service');
-  CourseService = courseServiceModule.CourseService;
-  
-  const loadCoursesModule = require('../../dist/utils/loadCoursesFromJson');
-  loadCoursesFromJson = loadCoursesModule.loadCoursesFromJson;
-} catch (error) {
-  // Fallback a src si dist no existe (desarrollo local)
-  const polkadotConfig = require('../../src/config/polkadot');
-  initPolkadot = polkadotConfig.initPolkadot;
-  
-  courseRoutes = require('../../src/routes/course.routes').default;
-  enrollmentRoutes = require('../../src/routes/enrollment.routes').default;
-  userRoutes = require('../../src/routes/user.routes').default;
-  balanceRoutes = require('../../src/routes/balance.routes').default;
-  nftRoutes = require('../../src/routes/nft.routes').default;
-  paymentRoutes = require('../../src/routes/payment.routes').default;
-  
-  const courseServiceModule = require('../../src/services/course.service');
-  CourseService = courseServiceModule.CourseService;
-  
-  const loadCoursesModule = require('../../src/utils/loadCoursesFromJson');
-  loadCoursesFromJson = loadCoursesModule.loadCoursesFromJson;
-}
 
 const app = express();
 
@@ -145,4 +110,3 @@ initializeServices().catch(console.error);
 export const handler = serverless(app, {
   binary: ['image/*', 'application/json']
 });
-

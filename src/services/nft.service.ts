@@ -523,7 +523,7 @@ export class NFTService {
       }
       
       if (userNFTs.length === 0) {
-        console.log(`⚠️ No se encontraron NFTs para la dirección ${address} en la colección ${targetCollectionId}`);
+        console.log(`⚠️ No se encontraron NFTs para la dirección ${address} en la colección ${targetCollectionIdNum}`);
       }
     } catch (error) {
       console.error('Error general al obtener NFTs del usuario:', error);
