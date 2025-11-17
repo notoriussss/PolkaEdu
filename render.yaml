@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: polkaedu-backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      # Agrega tus variables de entorno en el dashboard de Render
+      # POLKADOT_WS_URL
+      # NFT_ADMIN_MNEMONIC
+      # NFT_COLLECTION_ID
+      # JWT_SECRET
+      # PINATA_KEY (opcional)
+      # PINATA_SECRET (opcional)
+
