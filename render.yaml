@@ -4,7 +4,7 @@ services:
     env: node
     plan: free
     region: oregon
-    buildCommand: yarn install && yarn build
+    buildCommand: yarn install && echo "Building..." && yarn build && echo "Build completed, verifying..." && yarn postbuild
     startCommand: yarn start
     healthCheckPath: /health
     envVars:
