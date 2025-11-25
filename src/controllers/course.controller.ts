@@ -28,6 +28,32 @@ export class CourseController {
     }
   }
 
+  async getCourseLessons(req: Request, res: Response) {
+    try {
+      const { id } = req.params;
+      const lessons = await courseService.getCourseLessons(id);
+      
+      res.json({
+        success: true,
+        courseId: id,
+        count: lessons.length,
+        lessons: lessons.map(lesson => ({
+          id: lesson.id,
+          courseId: lesson.courseId,
+          title: lesson.title,
+          description: lesson.description,
+          content: lesson.content,
+          order: lesson.order,
+          duration: lesson.duration,
+          createdAt: lesson.createdAt instanceof Date ? lesson.createdAt.toISOString() : lesson.createdAt,
+          updatedAt: lesson.updatedAt instanceof Date ? lesson.updatedAt.toISOString() : lesson.updatedAt
+        }))
+      });
+    } catch (error: any) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+
   async createCourse(req: Request, res: Response) {
     try {
       const course = await courseService.createCourse(req.body);

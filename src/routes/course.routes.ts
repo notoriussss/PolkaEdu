@@ -5,6 +5,7 @@ const router = Router();
 const courseController = new CourseController();
 
 router.get('/', (req, res) => courseController.getAllCourses(req, res));
+router.get('/:id/lessons', (req, res) => courseController.getCourseLessons(req, res));
 router.get('/:id', (req, res) => courseController.getCourseById(req, res));
 router.post('/', (req, res) => courseController.createCourse(req, res));
 router.put('/:id', (req, res) => courseController.updateCourse(req, res));

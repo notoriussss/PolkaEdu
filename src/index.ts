@@ -2,12 +2,14 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { initPolkadot, disconnectPolkadot } from './config/polkadot';
+import apiRoutes from './routes/api.routes';
 import courseRoutes from './routes/course.routes';
 import enrollmentRoutes from './routes/enrollment.routes';
 import userRoutes from './routes/user.routes';
 import balanceRoutes from './routes/balance.routes';
 import nftRoutes from './routes/nft.routes';
 import paymentRoutes from './routes/payment.routes';
+import certificateRoutes from './routes/certificate.routes';
 import { CourseService } from './services/course.service';
 import { loadCoursesFromJson } from './utils/loadCoursesFromJson';
 
@@ -52,9 +54,11 @@ app.get('/health', (req, res) => {
 });
 
 // Routes
+app.use('/api', apiRoutes); // Debe ir primero para que /api funcione
 app.use('/api/users', userRoutes);
 app.use('/api/courses', courseRoutes);
 app.use('/api/enrollments', enrollmentRoutes);
+app.use('/api/certificates', certificateRoutes);
 app.use('/api/balance', balanceRoutes);
 app.use('/api/nfts', nftRoutes);
 app.use('/api/payments', paymentRoutes);

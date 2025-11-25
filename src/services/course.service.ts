@@ -16,6 +16,13 @@ export class CourseService {
   }
 
   /**
+   * Obtiene todas las lecciones de un curso
+   */
+  async getCourseLessons(courseId: string) {
+    return storage.getLessonsByCourseId(courseId);
+  }
+
+  /**
    * Crea un nuevo curso
    */
   async createCourse(data: {
