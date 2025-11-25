@@ -25,6 +25,10 @@
   ],
   "author": "",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
   "dependencies": {
     "@polkadot/api": "^16.5.1",
     "@polkadot/keyring": "^13.5.7",

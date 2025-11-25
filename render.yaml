@@ -2,18 +2,22 @@ services:
   - type: web
     name: polkaedu-backend
     env: node
+    plan: free
+    region: oregon
     buildCommand: yarn install && yarn build
     startCommand: yarn start
+    healthCheckPath: /health
     envVars:
       - key: NODE_ENV
         value: production
       - key: PORT
         value: 10000
-      # Agrega tus variables de entorno en el dashboard de Render
-      # POLKADOT_WS_URL
-      # NFT_ADMIN_MNEMONIC
-      # NFT_COLLECTION_ID
-      # JWT_SECRET
-      # PINATA_KEY (opcional)
-      # PINATA_SECRET (opcional)
+      # IMPORTANTE: Agrega estas variables de entorno en el dashboard de Render
+      # POLKADOT_WS_URL (ej: wss://asset-hub-paseo.dotters.network)
+      # NFT_ADMIN_MNEMONIC (tu mnemonic de 12 palabras)
+      # NFT_COLLECTION_ID (ID de la colección NFT)
+      # JWT_SECRET (secret para JWT tokens)
+      # POLKADOT_ACCOUNT_TYPE (sr25519 o ed25519, default: sr25519)
+      # PINATA_KEY (opcional, para IPFS)
+      # PINATA_SECRET (opcional, para IPFS)
 
