@@ -48,6 +48,7 @@ export interface Enrollment {
   completedAt?: Date;
   user?: User;
   course?: Course;
+  certificate?: Certificate;
 }
 
 export interface Certificate {

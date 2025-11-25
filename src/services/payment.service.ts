@@ -99,7 +99,7 @@ export class PaymentService {
       const api = await this.getApi();
       decodeAddress(address); // Validar dirección
 
-      const account = await api.query.system.account(address);
+      const account = await api.query.system.account(address) as any;
       const balance = account.data.free.toString();
       const formatted = (Number(balance) / 10 ** 10).toFixed(4);
 

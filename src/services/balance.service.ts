@@ -20,7 +20,7 @@ export class BalanceService {
     const api = getApi();
     
     // Consultar el balance de la cuenta
-    const accountInfo = await api.query.system.account(address);
+    const accountInfo = await api.query.system.account(address) as any;
     
     // Extraer información del balance
     const data = accountInfo.data;
@@ -76,7 +76,7 @@ export class BalanceService {
    */
   async getAccountInfo(address: string) {
     const api = getApi();
-    const accountInfo = await api.query.system.account(address);
+    const accountInfo = await api.query.system.account(address) as any;
     
     return {
       nonce: accountInfo.nonce.toString(),
