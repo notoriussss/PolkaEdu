@@ -22,6 +22,26 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Ruta raíz
+app.get('/', (req, res) => {
+  res.json({
+    service: 'Polkadot Courses Backend',
+    version: '1.0.0',
+    status: 'running',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/health',
+      users: '/api/users',
+      courses: '/api/courses',
+      enrollments: '/api/enrollments',
+      balance: '/api/balance',
+      nfts: '/api/nfts',
+      payments: '/api/payments'
+    },
+    documentation: 'See /health for service status'
+  });
+});
+
 // Health check
 app.get('/health', (req, res) => {
   res.json({ 
@@ -38,6 +58,25 @@ app.use('/api/enrollments', enrollmentRoutes);
 app.use('/api/balance', balanceRoutes);
 app.use('/api/nfts', nftRoutes);
 app.use('/api/payments', paymentRoutes);
+
+// Manejo de rutas no encontradas (404)
+app.use((req: express.Request, res: express.Response) => {
+  res.status(404).json({
+    error: 'Route not found',
+    path: req.path,
+    method: req.method,
+    availableEndpoints: {
+      root: '/',
+      health: '/health',
+      users: '/api/users',
+      courses: '/api/courses',
+      enrollments: '/api/enrollments',
+      balance: '/api/balance',
+      nfts: '/api/nfts',
+      payments: '/api/payments'
+    }
+  });
+});
 
 // Manejo de errores
 app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
