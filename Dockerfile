@@ -1,9 +1,6 @@
 # Usar imagen oficial de Node.js
 FROM node:18-alpine
 
-# Instalar yarn globalmente
-RUN npm install -g yarn
-
 # Establecer directorio de trabajo
 WORKDIR /app
 
