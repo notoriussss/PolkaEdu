@@ -175,6 +175,22 @@ El código usa `pallet-uniques` de Polkadot. Asegúrate de conectarte a una red 
 - [Polkadot.js Apps](https://polkadot.js.org/apps) - Interfaz para interactuar con Polkadot
 - [Render Documentation](https://render.com/docs)
 
+## 🖼️ Demostración
+
+![Conexión Real con la API de Polkadot JS guardando tus NFT en la blockchain](./frontend/public/transactions.jpg)
+
+**Conexión Real con la API de Polkadot JS guardando tus NFT en la blockchain**
+
+## 👥 Contribuidores
+
+Gracias a todos los que han contribuido a este proyecto:
+
+- [@wildeswt](https://github.com/wildeswt)
+- [@Fer2703](https://github.com/Fer2703)
+- [@FonsoP](https://github.com/FonsoP)
+- [@iadev2005](https://github.com/iadev2005)
+- [@Kobalt09](https://github.com/Kobalt09)
+
 ## 📄 Licencia
 
 MIT
