@@ -7,7 +7,6 @@
     "dev": "tsx watch src/index.ts",
     "build": "tsc --skipLibCheck",
     "postbuild": "node scripts/verify-build.js",
-    "build:netlify": "tsc && tsc --project tsconfig.netlify.json",
     "start": "node scripts/start.js",
     "lint": "eslint src --ext .ts",
     "test": "jest",
@@ -40,8 +39,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.6.1",
     "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
-    "serverless-http": "^4.0.0"
+    "jsonwebtoken": "^9.0.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
