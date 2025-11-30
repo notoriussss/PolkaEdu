@@ -186,4 +186,3 @@ MIT
 ---
 
 **Desarrollado con ❤️ usando Polkadot, Next.js y TypeScript**
-

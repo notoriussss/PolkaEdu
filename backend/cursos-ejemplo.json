@@ -1,0 +1,302 @@
+{
+  "cursos": [
+    {
+      "codigo": "POLK-001",
+      "titulo": "Introduction to Polkadot",
+      "descripcion": "Learn the fundamental concepts of Polkadot, its architecture and how the interoperable blockchain ecosystem works.",
+      "precio": 10.5,
+      "nivel": "Beginner",
+      "tipo": "Introduction",
+      "imageUrl": "/polka1.svg",
+      "unidades": [
+        {
+          "orden": 1,
+          "titulo": "What is Polkadot?",
+          "texto": "Polkadot is a next-generation blockchain platform that enables interoperability between different blockchains. It was created by Gavin Wood, co-founder of Ethereum, and is designed to solve scalability and communication problems between blockchains.\n\nIn this unit you will learn:\n- Basic concepts of Polkadot\n- Why it was created\n- Its main features and advantages",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/polkadot-intro.mp4",
+                "titulo": "Introduction to Polkadot",
+                "duracion": "5:30"
+              },
+              {
+                "url": "https://ejemplo.com/videos/polkadot-fundamentos.mp4",
+                "titulo": "Polkadot Fundamentals",
+                "duracion": "8:15"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/polkadot-logo.png",
+                "titulo": "Polkadot Logo",
+                "descripcion": "Official Polkadot logo"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/polkadot-ecosistema.png",
+                "titulo": "Polkadot Ecosystem",
+                "descripcion": "Polkadot ecosystem diagram"
+              }
+            ]
+          }
+        },
+        {
+          "orden": 2,
+          "titulo": "Polkadot Architecture",
+          "texto": "Polkadot's architecture is based on several key components that work together to create an interoperable and scalable blockchain ecosystem.\n\nMain components:\n\n1. Relay Chain: The main chain of Polkadot that coordinates the entire system\n2. Parachains: Specialized chains that connect to the Relay Chain\n3. Parathreads: Similar to Parachains but with a pay-per-use model\n4. Bridges: Bridges that connect Polkadot with other blockchains\n\nThe Relay Chain uses a consensus mechanism called GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) that enables fast and secure block finalization.",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/relay-chain.mp4",
+                "titulo": "Relay Chain Explained",
+                "duracion": "12:45"
+              },
+              {
+                "url": "https://ejemplo.com/videos/parachains.mp4",
+                "titulo": "Parachains and Parathreads",
+                "duracion": "15:20"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/arquitectura-polkadot.png",
+                "titulo": "Polkadot Architecture",
+                "descripcion": "Complete architecture diagram"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/relay-chain-diagrama.png",
+                "titulo": "Relay Chain",
+                "descripcion": "Relay Chain operation scheme"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/parachains-bridges.png",
+                "titulo": "Parachains and Bridges",
+                "descripcion": "Parachains and bridges visualization"
+              }
+            ]
+          }
+        },
+        {
+          "orden": 3,
+          "titulo": "Consensus and Validation",
+          "texto": "Polkadot uses a unique consensus system that combines several mechanisms to ensure network security and efficiency.\n\nThe consensus system includes:\n\n- GRANDPA: For fast block finalization\n- BABE: For block production\n- Validators: Nodes that validate transactions\n- Nominators: Users who delegate their tokens to validators\n- Collators: Maintain Parachain information\n\nThis system allows Polkadot to process thousands of transactions per second while maintaining a high level of security.",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/consenso-polkadot.mp4",
+                "titulo": "Consensus System",
+                "duracion": "18:30"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/consenso-diagrama.png",
+                "titulo": "Consensus Process",
+                "descripcion": "Consensus system flow"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "codigo": "SUB-002",
+      "titulo": "Development with Substrate",
+      "descripcion": "Learn to develop custom blockchains using Substrate, Polkadot's development framework.",
+      "precio": 25.0,
+      "nivel": "Advanced",
+      "tipo": "Programming",
+      "imageUrl": "/polka2.svg",
+      "unidades": [
+        {
+          "orden": 1,
+          "titulo": "Introduction to Substrate",
+          "texto": "Substrate is a modular framework that allows you to easily build custom blockchains. It is the same framework that Polkadot uses to build the Relay Chain and allows you to create blockchains that can connect to the Polkadot ecosystem.\n\nSubstrate advantages:\n- Fast blockchain development\n- Modularity and customization\n- Interoperability with Polkadot\n- Updates without hard fork",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/substrate-intro.mp4",
+                "titulo": "First Steps with Substrate",
+                "duracion": "20:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/substrate-logo.png",
+                "titulo": "Substrate Logo",
+                "descripcion": "Official Substrate logo"
+              }
+            ]
+          }
+        },
+        {
+          "orden": 2,
+          "titulo": "Building Your First Blockchain",
+          "texto": "In this practical unit, you will learn to build your first blockchain using Substrate. We will cover development environment setup, creating a custom runtime, and deploying your blockchain.\n\nSteps to follow:\n1. Installation of necessary tools\n2. Creating a new Substrate project\n3. Pallets configuration\n4. Compilation and testing\n5. Blockchain deployment",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/substrate-tutorial-1.mp4",
+                "titulo": "Installation and Configuration",
+                "duracion": "25:00"
+              },
+              {
+                "url": "https://ejemplo.com/videos/substrate-tutorial-2.mp4",
+                "titulo": "Creating the Runtime",
+                "duracion": "30:00"
+              },
+              {
+                "url": "https://ejemplo.com/videos/substrate-tutorial-3.mp4",
+                "titulo": "Deployment and Testing",
+                "duracion": "22:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/substrate-arquitectura.png",
+                "titulo": "Substrate Architecture",
+                "descripcion": "Framework components"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/runtime-diagrama.png",
+                "titulo": "Substrate Runtime",
+                "descripcion": "Runtime structure"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "codigo": "NFT-003",
+      "titulo": "NFTs on Polkadot",
+      "descripcion": "Discover how to create and manage NFTs (Non-Fungible Tokens) in the Polkadot ecosystem.",
+      "precio": 15.0,
+      "nivel": "Intermediate",
+      "tipo": "Programming",
+      "imageUrl": "/polka3.svg",
+      "unidades": [
+        {
+          "orden": 1,
+          "titulo": "NFT Concepts",
+          "texto": "NFTs (Non-Fungible Tokens) are unique tokens that represent ownership of a digital asset. Unlike fungible tokens like DOT or BTC, each NFT is unique and irreplaceable.\n\nNFT applications:\n- Digital art\n- Certificates and credentials\n- Intellectual property\n- Gaming and collectibles\n- Digital identity",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/nft-conceptos.mp4",
+                "titulo": "What are NFTs?",
+                "duracion": "10:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/nft-ejemplo.png",
+                "titulo": "NFT Example",
+                "descripcion": "NFT visualization"
+              }
+            ]
+          }
+        },
+        {
+          "orden": 2,
+          "titulo": "Creating NFTs on Polkadot",
+          "texto": "Learn to create and issue NFTs using the standards available on Polkadot. We will use Polkadot's Uniques module to create collections and unique tokens.\n\nThe process includes:\n1. Creating a collection\n2. Issuing unique tokens\n3. Metadata management\n4. NFT transfers\n5. IPFS integration for image storage",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/crear-coleccion.mp4",
+                "titulo": "Creating an NFT Collection",
+                "duracion": "15:00"
+              },
+              {
+                "url": "https://ejemplo.com/videos/emitir-nft.mp4",
+                "titulo": "NFT Issuance",
+                "duracion": "18:00"
+              },
+              {
+                "url": "https://ejemplo.com/videos/ipfs-integracion.mp4",
+                "titulo": "IPFS Integration",
+                "duracion": "12:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/coleccion-nft.png",
+                "titulo": "Collection Structure",
+                "descripcion": "NFT collection diagram"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/ipfs-workflow.png",
+                "titulo": "IPFS Flow",
+                "descripcion": "IPFS storage process"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "codigo": "DEFI-004",
+      "titulo": "DeFi on Polkadot",
+      "descripcion": "Explore Decentralized Finance (DeFi) opportunities in the Polkadot ecosystem.",
+      "precio": 20.0,
+      "nivel": "Intermediate",
+      "tipo": "Introduction",
+      "imageUrl": "/polka4.svg",
+      "unidades": [
+        {
+          "orden": 1,
+          "titulo": "Introduction to DeFi",
+          "texto": "Decentralized Finance (DeFi) is revolutionizing the traditional financial sector by eliminating intermediaries and enabling open and accessible financial services for everyone.\n\nCommon DeFi services:\n- Decentralized lending and borrowing\n- Decentralized exchanges (DEX)\n- Yield farming\n- Staking and validation\n- Decentralized insurance",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/defi-intro.mp4",
+                "titulo": "What is DeFi?",
+                "duracion": "14:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/defi-ecosistema.png",
+                "titulo": "DeFi Ecosystem",
+                "descripcion": "DeFi ecosystem map"
+              }
+            ]
+          }
+        },
+        {
+          "orden": 2,
+          "titulo": "DeFi Projects on Polkadot",
+          "texto": "The Polkadot ecosystem hosts several innovative DeFi projects that leverage the network's interoperability to offer unique financial services.\n\nNotable projects:\n- Acala: All-in-one DeFi platform\n- Moonbeam: Ethereum compatibility\n- Parallel Finance: Lending and staking\n- Equilibrium: Multi-asset lending\n\nThese projects demonstrate how Polkadot's interoperability enables the creation of more complete and efficient DeFi solutions.",
+          "materialApoyo": {
+            "videos": [
+              {
+                "url": "https://ejemplo.com/videos/acala-overview.mp4",
+                "titulo": "Acala Network",
+                "duracion": "16:00"
+              },
+              {
+                "url": "https://ejemplo.com/videos/moonbeam-eth.mp4",
+                "titulo": "Moonbeam and Ethereum Compatibility",
+                "duracion": "12:00"
+              }
+            ],
+            "imagenes": [
+              {
+                "url": "https://ejemplo.com/imagenes/acala-logo.png",
+                "titulo": "Acala Network",
+                "descripcion": "Acala logo"
+              },
+              {
+                "url": "https://ejemplo.com/imagenes/moonbeam-logo.png",
+                "titulo": "Moonbeam",
+                "descripcion": "Moonbeam logo"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
