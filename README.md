@@ -1,6 +1,10 @@
 # 🎓 PolkaEdu
 
-Plataforma educativa completa con certificados NFT en Polkadot. Sistema de cursos tipo Platzi con emisión automática de certificados NFT verificables en blockchain.
+**Plataforma E-Learning que emite certificados de cursos como NFTs en Polkadot. Proyecto para la Hackathon Polkadot.**
+
+PolkaEdu es una plataforma educativa descentralizada que combina el aprendizaje en línea con la tecnología blockchain de Polkadot. Los estudiantes pueden inscribirse en cursos, completar lecciones y recibir certificados verificables como NFTs directamente en sus wallets, garantizando la autenticidad y permanencia de sus logros educativos en la blockchain.
+
+🌐 **Sitio Web en Vivo**: [https://polkaedu.netlify.app](https://polkaedu.netlify.app)
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue.svg)](https://www.typescriptlang.org/)
@@ -169,6 +173,7 @@ El código usa `pallet-uniques` de Polkadot. Asegúrate de conectarte a una red 
 
 ## 🔗 Recursos
 
+- 🌐 [PolkaEdu - Sitio Web en Vivo](https://polkaedu.netlify.app)
 - [Polkadot.js Documentation](https://polkadot.js.org/docs/)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Substrate Documentation](https://docs.substrate.io/)
