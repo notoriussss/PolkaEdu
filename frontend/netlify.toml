@@ -1,0 +1,18 @@
+[build]
+  # Comandos para instalar dependencias y construir la aplicación
+  # Netlify ejecuta automáticamente npm install antes del build command
+  # Para desarrollo local: npm install && npm run dev
+  command = "npm run build"
+  
+  # Directorio de publicación (Next.js con plugin de Netlify maneja esto automáticamente)
+  # publish = ".next"  # No necesario con el plugin de Next.js
+
+# Plugin de Next.js para Netlify (requerido para Next.js)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Variables de entorno (si las necesitas, descomenta y agrega)
+# [build.environment]
+#   NODE_VERSION = "20"
+#   NPM_FLAGS = "--legacy-peer-deps"  # Si tienes problemas con dependencias
+

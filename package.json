@@ -1,0 +1,41 @@
+{
+  "name": "polkaedu",
+  "version": "1.0.0",
+  "description": "Plataforma educativa con certificados NFT en Polkadot - Monorepo",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint": "npm run lint:backend && npm run lint:frontend"
+  },
+  "keywords": [
+    "polkadot",
+    "nft",
+    "courses",
+    "certificates",
+    "blockchain",
+    "nextjs",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
