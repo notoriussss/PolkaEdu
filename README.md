@@ -156,13 +156,9 @@ El backend está configurado para desplegarse en Render. Ver `backend/render.yam
 
 ### Frontend (Netlify)
 
-El frontend está configurado para desplegarse en Netlify o Vercel. Ver `frontend/netlify.toml` para configuración.
+El frontend está configurado para desplegarse en Netlify. Ver `frontend/netlify.toml` para configuración.
 
 ## 📝 Notas Importantes
-
-### Almacenamiento
-
-El backend usa **almacenamiento en memoria**. Los datos se pierden al reiniciar el servidor. Para producción, considera usar una base de datos (PostgreSQL, MongoDB, etc.).
 
 ### Pallet de NFTs
 
