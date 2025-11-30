@@ -247,10 +247,6 @@ Configura estas variables en el dashboard de Render:
 
 ## 📝 Notas Importantes
 
-### Almacenamiento
-
-Este proyecto usa **almacenamiento en memoria**. Los datos se pierden al reiniciar el servidor. Para producción, considera usar una base de datos (PostgreSQL, MongoDB, etc.).
-
 ### Pallet de NFTs
 
 El código usa `pallet-uniques` de Polkadot. Asegúrate de conectarte a una red que soporte este pallet:
