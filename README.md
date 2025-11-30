@@ -195,6 +195,7 @@ Gracias a todos los que han contribuido a este proyecto:
 - [@FonsoP](https://github.com/FonsoP)
 - [@iadev2005](https://github.com/iadev2005)
 - [@Kobalt09](https://github.com/Kobalt09)
+- [@notoriussss](https://github.com/notoriussss)
 
 ## 📄 Licencia
 
