@@ -154,7 +154,7 @@ npm run lint             # Linter
 
 El backend está configurado para desplegarse en Render. Ver `backend/render.yaml` y [Backend README](./backend/README.md) para más detalles.
 
-### Frontend (Netlify/Vercel)
+### Frontend (Netlify)
 
 El frontend está configurado para desplegarse en Netlify o Vercel. Ver `frontend/netlify.toml` para configuración.
 
